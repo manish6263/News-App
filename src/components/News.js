@@ -42,7 +42,7 @@ const News = (props) => {
     }
     return (
         <>
-            <h1 className="text-center my-4">NewsMonkey - Top {capitalize(props.category)} Headlines</h1>
+            <h1 className="text-center" style={{marginTop: "90px"}}>NewsMonkey - Top {capitalize(props.category)} Headlines</h1>
             {loading && <Spinner />}
             <InfiniteScroll
                 dataLength={articles.length}
