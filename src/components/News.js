@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Spinner from './Spinner';
 import NewsItem from './NewsItem';
 import InfiniteScroll from 'react-infinite-scroll-component';
-// document.title = `${capitalize(props.category)} - NewsMonkey`;
 
 const News = (props) => {
     const [articles, setArticles] = useState([]);
@@ -12,6 +11,7 @@ const News = (props) => {
     const [totalResults, setTotalResults] = useState(0);
 
     useEffect(() => {
+        document.title = `${capitalize(props.category)} - NewsMonkey`;
         updateNews();
     }, [])
 
