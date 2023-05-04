@@ -22,6 +22,7 @@ const News = (props) => {
         let data = await fetch(url);
         props.showProgress(30);
         let parsedData = await data.json();
+        console.log('parsedData', parsedData);
         props.showProgress(70);
         setArticles(parsedData.articles);
         setTotalResults(parsedData.totalResults);
